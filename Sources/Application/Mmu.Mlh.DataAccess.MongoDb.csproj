@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Features>IOperation</Features>
+    <CodeAnalysisRuleSet>..\..\CA_ProductionCode.ruleset</CodeAnalysisRuleSet>
+    <Authors>DrMueller</Authors>
+    <Product>MyLittleHelpers.DataAccess.MongoDB</Product>
+    <Description>DrMuellers little Data Access for MongoDB</Description>
+    <AssemblyVersion Condition="'$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</AssemblyVersion>
+    <FileVersion Condition="'$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</FileVersion>
+    <Version Condition="'$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</Version>
+    <AssemblyVersion Condition="'$(BUILD_BUILDNUMBER)' == '' ">1.0.0.0</AssemblyVersion>
+    <FileVersion Condition="'$(BUILD_BUILDNUMBER)' == '' ">1.0.0.0</FileVersion>
+    <Version Condition="'$(BUILD_BUILDNUMBER)' == '' ">1.0.0.0</Version>
+    <PackageIconUrl>https://raw.githubusercontent.com/DrMueller/MLH.DataAccess.MongoDB/master/Sources/Application/Infrastructure/Assets/M.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mmu.Mlh.DomainExtensions" Version="2.0.5" />
+    <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
+    <PackageReference Include="StructureMap" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\DataMapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\DataAccess\Sources\Application\Mmu.Mlh.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
