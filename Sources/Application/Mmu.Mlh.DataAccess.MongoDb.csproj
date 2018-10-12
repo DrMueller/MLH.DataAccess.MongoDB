@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <PackageReference Include="Mmu.Mlh.DataAccess" Version="2.0.5" />
-    <PackageReference Include="Mmu.Mlh.DomainExtensions" Version="2.0.5" />
     <PackageReference Include="MongoDB.Driver" Version="2.7.0" />
     <PackageReference Include="StructureMap" Version="4.7.0" />
   </ItemGroup>
