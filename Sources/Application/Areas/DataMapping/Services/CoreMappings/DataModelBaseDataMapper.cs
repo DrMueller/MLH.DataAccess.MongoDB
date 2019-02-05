@@ -7,7 +7,7 @@ namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataMapping.Services.CoreMappings
     {
         public void InitializeDataMapping()
         {
-            BsonClassMap.RegisterClassMap<DataModelBase<string>>(
+            BsonClassMap.RegisterClassMap<AggregateRootDataModel<string>>(
                 f =>
                 {
                     f.AutoMap();

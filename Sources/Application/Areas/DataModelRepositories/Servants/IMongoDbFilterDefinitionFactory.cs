@@ -6,7 +6,7 @@ using MongoDB.Driver;
 namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataModelRepositories.Servants
 {
     internal interface IMongoDbFilterDefinitionFactory<T, TId>
-        where T : DataModelBase<TId>
+        where T : AggregateRootDataModel<TId>
     {
         FilterDefinition<T> CreateFilterDefinition(Expression<Func<T, bool>> predicate);
     }

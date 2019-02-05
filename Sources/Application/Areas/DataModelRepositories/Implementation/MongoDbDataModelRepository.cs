@@ -11,7 +11,7 @@ using MongoDB.Driver;
 namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataModelRepositories.Implementation
 {
     internal class MongoDbDataModelRepository<T, TId> : IDataModelRepository<T, TId>
-        where T : DataModelBase<TId>
+        where T : AggregateRootDataModel<TId>
     {
         private readonly IMongoDbFilterDefinitionFactory<T, TId> _filterDefinitionFactory;
         private readonly IMongoDbAccess _mongoDbAccess;

@@ -6,6 +6,6 @@ namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataModelRepositories.Servants
     internal interface IMongoDbAccess
     {
         IMongoCollection<T> GetDatabaseCollection<T, TId>()
-            where T : DataModelBase<TId>;
+            where T : AggregateRootDataModel<TId>;
     }
 }

@@ -19,7 +19,7 @@ namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataModelRepositories.Servants.Implem
         }
 
         public IMongoCollection<T> GetDatabaseCollection<T, TId>()
-            where T : DataModelBase<TId>
+            where T : AggregateRootDataModel<TId>
         {
             var db = GetDatabase();
             var result = db.GetCollection<T>(_mongoDbSettings.CollectionName);
