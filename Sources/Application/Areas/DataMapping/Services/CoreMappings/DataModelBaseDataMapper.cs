@@ -7,6 +7,9 @@ namespace Mmu.Mlh.DataAccess.MongoDb.Areas.DataMapping.Services.CoreMappings
     {
         public void InitializeDataMapping()
         {
+            // Why EntityDataModel instead of AggregateRootDataModel?
+            // Because the AggregateRootDataModel is a EntityDataModel and we need to map the top level type
+            // That said, the Repositories still only communicate via AggregateRootDataModel
             BsonClassMap.RegisterClassMap<AggregateRootDataModel<string>>(
                 f =>
                 {
